@@ -3,7 +3,15 @@ import { Link } from 'react-router-dom';
 import Price from '../Price/Price';
 import StarRating from '../StarRating/StarRating';
 import classes from './thumbnails.module.css';
-export default function Thumbnails({ foods }) {
+export default function Thumbnails() {
+
+  const food = [
+    {
+      id:'2344224',
+      name:"Pizza",
+      imageUrl:"/foods/food-5.jpg"
+    }
+  ]
   return (
     <ul className={classes.list}>
       {foods.map(food => (
