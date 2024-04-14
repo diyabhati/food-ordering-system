@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 export default function Dashboard() {
   const { user } = useAuth();
 
+  console.log(user);
+
   return (
     <div className={classes.container}>
       <div className={classes.menu}>

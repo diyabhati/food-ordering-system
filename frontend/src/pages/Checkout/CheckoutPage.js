@@ -55,16 +55,7 @@ export default function CheckoutPage() {
           </div>
           <OrderItemsList order={order} />
         </div>
-        <div>
-          <Title title="Choose Your Location" fontSize="1.6rem" />
-          <Map
-            location={order.addressLatLng}
-            onChange={latlng => {
-              console.log(latlng);
-              setOrder({ ...order, addressLatLng: latlng });
-            }}
-          />
-        </div>
+        
 
         <div className={classes.buttons_container}>
           <div className={classes.buttons}>

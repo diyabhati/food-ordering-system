@@ -7,6 +7,7 @@ import { UserModel } from '../models/user.model.js';
 import bcrypt from 'bcryptjs';
 import auth from '../middleware/auth.mid.js';
 import admin from '../middleware/admin.mid.js';
+
 const PASSWORD_HASH_SALT_ROUNDS = 10;
 
 router.post(
@@ -161,7 +162,7 @@ const generateTokenResponse = user => {
       email: user.email,
       isAdmin: user.isAdmin,
     },
-    process.env.JWT_SECRET,
+    "fgdfg345",
     {
       expiresIn: '30d',
     }

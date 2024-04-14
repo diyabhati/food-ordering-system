@@ -17,10 +17,13 @@ import FoodsAdminPage from './pages/FoodsAdmin/FoodsAdminPage';
 import FoodEditPage from './pages/FoodEdit/FoodEditPage';
 import UsersPage from './pages/UsersPage/UsersPage';
 import UserEditPage from './pages/UserEdit/UserEditPage';
+import Explore from './pages/exploreMenu/Explore';
+import Chatbot from './pages/Chatbot/Chatbot';
 
 export default function AppRoutes() {
   return (
     <Routes>
+      <Route path='/explore'element={<Explore/>}/>
       <Route path="/" element={<HomePage />} />
       <Route path="/search/:searchTerm" element={<HomePage />} />
       <Route path="/tag/:tag" element={<HomePage />} />
@@ -28,6 +31,7 @@ export default function AppRoutes() {
       <Route path="/cart" element={<CartPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
+      <Route path="/chatbot" element={<Chatbot />} />
       <Route
         path="/checkout"
         element={
@@ -36,6 +40,7 @@ export default function AppRoutes() {
           </AuthRoute>
         }
       />
+      <Route path="/chatbot" element={Chatbot}/>
       <Route
         path="/payment"
         element={

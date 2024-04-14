@@ -1,11 +1,14 @@
 import { useState, createContext, useContext } from 'react';
 import * as userService from '../services/userService';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(userService.getUser());
+
+  const navigate = useNavigate()
 
   const login = async (email, password) => {
     try {
@@ -29,6 +32,8 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     userService.logout();
+    localStorage.removeItem('table');
+    navigate("/")
     setUser(null);
     toast.success('Logout Successful');
   };

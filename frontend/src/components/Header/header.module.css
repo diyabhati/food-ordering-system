@@ -1,15 +1,15 @@
 .header {
   background: white;
   padding: 0;
-  border-bottom: 1px solid #e72929;
+  border-bottom: 1px solid #008B8B ;
 }
 
 .header a {
-  color: #af1313;
+  color: #008B8B ;
 }
 
 .header a:hover {
-  background: #e72929;
+  background: #008B8B  ;
   color: white;
   cursor: pointer;
 }
@@ -57,9 +57,32 @@
 }
 
 .cart_count {
-  background-color: #ff4d4d;
+  background-color: #008B8B ;
   color: white;
   padding: 0.1rem 0.45rem;
   border-radius: 100rem;
   font-size: 0.9rem;
 }
+/* header.module.css */
+
+.logo_container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.chatbot_icon {
+  margin-left: 20px; /* Adjust the margin as needed */
+}
+
+.image.logo {
+  width: 30px; 
+  height: 30px; 
+  border-radius: 50%; }
+

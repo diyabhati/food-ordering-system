@@ -9,7 +9,7 @@ set('strictQuery', true);
 
 export const dbconnect = async () => {
   try {
-    connect(process.env.MONGO_URI, {
+    connect('mongodb+srv://diyabhati7977:741852963@cluster0.aaaxnhw.mongodb.net/rest?retryWrites=true&w=majority&appName=Cluster0', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });

@@ -3,14 +3,15 @@
   height: 100%;
   border: none;
   border-bottom: 0 solid grey;
+  border-radius: 5px;
   transition: border-width 0.15s ease-out;
-  background-color: white;
+  background-color:white;
   font-size: 1.1rem;
   outline: none;
 }
 
 .input::placeholder {
-  color: #dfdfdf;
+  color: #0c0c0c;
   font-size: 0.95rem;
 }
 

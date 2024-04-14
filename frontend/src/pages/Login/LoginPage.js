@@ -22,7 +22,7 @@ export default function LoginPage() {
   useEffect(() => {
     if (!user) return;
 
-    returnUrl ? navigate(returnUrl) : navigate('/');
+    returnUrl ? navigate(returnUrl) : navigate('/explore');
   }, [user]);
 
   const submit = async ({ email, password }) => {
@@ -57,7 +57,7 @@ export default function LoginPage() {
 
           <div className={classes.register}>
             New user? &nbsp;
-            <Link to={`/register${returnUrl ? '?returnUrl=' + returnUrl : ''}`}>
+            <Link to={`/register${returnUrl ? '?returnUrl=' + returnUrl : ''}`} className='registerLink'>
               Register here
             </Link>
           </div>

@@ -35,7 +35,7 @@ export const sample_foods = [
   {
     id: '4',
     name: 'Fried Potatoes',
-    price: 2,
+    price: 150,
     cookTime: '15-20',
     favorite: true,
     origins: ['belgium', 'france'],
