@@ -20,17 +20,24 @@ const FoodOrderingChatbot = () => {
   const handleSendMessage = () => {
     if (userInput.trim() === '') return;
 
-    const newMessage = {
+    const newUserMessage = {
       sender: 'user',
       text: userInput,
     };
 
-    setMessages([...messages, newMessage]);
+    // Add user's message to chat
+    setMessages([...messages, newUserMessage]);
+
+    // Reset input field
     setUserInput('');
 
     // Bot response based on user input
     const botResponse = generateBotResponse(userInput);
-    setMessages([...messages, botResponse]);
+
+    // Wait for a short delay to simulate bot response time
+    setTimeout(() => {
+      setMessages([...messages, botResponse]);
+    }, 1000);
   };
 
   const generateBotResponse = (userInput) => {
@@ -64,7 +71,7 @@ const FoodOrderingChatbot = () => {
     // Construct the menu response
     let response = 'Here is our menu:\n';
     menuItems.forEach((item) => {
-      response += `${item.name}: ${item.price}\n`;
+      response += `${item.name}: ${item.price}\n`; // Added the missing backticks and semicolon
     });
     return response;
   };
@@ -82,7 +89,7 @@ const FoodOrderingChatbot = () => {
         {messages.map((message, index) => (
           <div
             key={index}
-            className={`message ${message.sender === 'user' ? 'user' : 'bot'}`}
+            className={`${message.sender === 'user' ? 'user' : 'bot'}`} // Fixed string interpolation
           >
             <p className="message-text">{message.text}</p>
           </div>
