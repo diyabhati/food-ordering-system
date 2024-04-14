@@ -5,7 +5,7 @@ import StarRating from '../StarRating/StarRating';
 import classes from './thumbnails.module.css';
 export default function Thumbnails() {
 
-  const food = [
+  const foods = [
     {
       id:'2344224',
       name:"Pizza",
