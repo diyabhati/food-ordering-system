@@ -77,10 +77,14 @@ const FoodOrderingChatbot = () => {
 
   return (
     <div className="chatbot-container">
+      <h2 className="header">Welcome to Chatbot!</h2>
       <div className="messages-container">
         {messages.map((message, index) => (
-          <div key={index} className={`message ${message.sender}`}>
-            {message.text}
+          <div
+            key={index}
+            className={`message ${message.sender === 'user' ? 'user' : 'bot'}`}
+          >
+            <p className="message-text">{message.text}</p>
           </div>
         ))}
       </div>
